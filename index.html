@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Token Table</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>GliderGPT Marketplace</h1>
+      <nav class="navigation" aria-label="Main Navigation">
+        <a href="swap/" class="buy-btn" aria-label="Buy Tokens">Buy</a>
+        <a id="connect" class="connect-btn" aria-label="Connect Wallet">Connect</a>
+        <div id="wallet-info" class="wallet-info hidden">
+          <div class="menu-text">
+            <p id="account_network"></p>
+          </div>
+          <a href="user/" class="menu-text">
+            <p id="user_name"></p>
+            <p id="contact_address"></p>
+          </a>
+          <div class="menu-text">
+            <p id="token_name"></p>
+            <p id="token_balance"></p>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search Agent..." id="searchAgent" aria-label="Search for an AI Agent">
+      <button class="create-button" aria-label="Create a New AI Agent">Create New AI Agent</button>
+    </div>
+
+    <table class="token-table">
+      <thead>
+        <tr>
+          <th>Agent</th>
+          <th>Market Cap</th>
+          <th>1 Day Change</th>
+          <th>Total Value Locked</th>
+          <th>Holder Count</th>
+          <th>Lifetime Inferences</th>
+          <th>Intelligence</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- Dynamic content populated by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal for "Connect" -->
+  <div id="connectModal1" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" aria-label="Close">&times;</button>
+      <h2>Log in or Sign Up</h2>
+      <div class="wallet-options">
+        <input type="email" placeholder="Enter your email address" class="email-input" aria-label="Email Address">
+        <button class="submit-btn" aria-label="Submit Email">Submit</button>
+        <button id="connectMetaMask" class="wallet-select" aria-label="Connect with a Wallet">Continue with a Wallet</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for "Create New AI Agent" -->
+  <div id="connectModal2" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" aria-label="Close">&times;</button>
+      <h2>Create New AI Agent</h2>
+      <div class="token-options">
+        <a href="NewToken/" class="token-option" aria-label="Launch a New Token">
+          <img src="images/newtoken.png" alt="New Token Icon">
+          <p>Launch a New Token</p>
+        </a>
+        <a href="comingsoon/" class="token-option" aria-label="I Have My Own Token">
+          <img src="images/mytoken.png" alt="Own Token Icon">
+          <p>I Have My Own Token</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
